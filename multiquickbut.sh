@@ -1,20 +1,17 @@
 #!/bin/sh
 #
 
-wget -O /tmp/extensions-multiquickbuttonfhd.tar "https://raw.githubusercontent.com/tarekzoka/multiquickbut-os/main/extensions-multiquickbuttonfhd.tar"
+wget -O /tmp/enigma2-plugin-extensions-multiquickbuttonfhd.deb "https://raw.githubusercontent.com/tarekzoka/multiquickbut-os/main/enigma2-plugin-extensions-multiquickbuttonfhd.deb"
 
-tar -xzf /tmp/*.tar.gz -C /
+dpkg -i --force-overwrite /tmp/*.deb
 
-rm -r /tmp/extensions-multiquickbuttonfhd.tar
+rm -r /tmp/enigma2-plugin-extensions-multiquickbuttonfhd.deb
 
 wait
-
-by tarek hanfy
-
-killall -9 enigma2
 
 sleep 2;
 
-wait
+exit 0
 
-exit 0  
+
+
